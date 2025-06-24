@@ -26,7 +26,7 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <bottomSheet:SfBottomSheet x:Name="bottomSheet" ContentPadding="10" State="Collapsed">
+        <bottomSheet:SfBottomSheet x:Name="bottomSheet" State="Collapsed">
             <bottomSheet:SfBottomSheet.BottomSheetContent>
                 <ScrollView  x:Name="bottomSheetContent">
                     <VerticalStackLayout>

@@ -44,15 +44,6 @@ namespace BottomSheetSample
             },
             new Book
             {
-                Title = "Machine Learning Using C#",
-                Genre = "Programming, Software Engineering",
-                Published = "August 2008",
-                Description = "You will learn several different approaches to applying machine learning",
-                Rating = 4.7,
-                Price = 34.99M
-            },
-            new Book
-            {
                 Title = "Neural Networks Using C#",
                 Genre = "Programming",
                 Published = "October 1999",
@@ -86,15 +77,6 @@ namespace BottomSheetSample
                 Description = "It is for developers looking to step into frightening world of iPhone",
                 Rating = 4.8,
                 Price = 54.99M
-            },
-            new Book
-            {
-                Title = "Visual Studio 2015",
-                Genre = "Programming, Software Design",
-                Published = "October 2004",
-                Description = "The new version of the widely-used integrated development environment",
-                Rating = 4.7,
-                Price = 44.99M
             },
             new Book
             {
