@@ -57,3 +57,55 @@ Below are code examples that illustrate how to set these properties dynamically.
 **Output:**
 
  ![collapsed-bottomsheet-content-he.gif](https://support.syncfusion.com/kb/agent/attachment/article/20445/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyMTc2Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.4erQht30C6c3cRyFcoP-d4GR3oh0cNgd7vTvycYenO4)
+
+ **C#:**
+
+To calculate and apply the BottomSheet height during runtime:
+
+```
+private void ListView_ItemTapped(object? sender, ItemTappedEventArgs e)
+{
+    bottomSheet.BottomSheetContent.BindingContext = e.Item;
+    double contentHeight;
+    double ratio = CalculateExpandRatio(bottomSheet.BottomSheetContent, this.Height, out contentHeight);
+
+    if (bottomSheet.State == BottomSheetState.Collapsed)
+    {
+        bottomSheet.CollapsedHeight = contentHeight;
+    }
+    else
+    {
+        bottomSheet.HalfExpandedRatio = bottomSheet.FullExpandedRatio = ratio;
+    }
+
+    bottomSheet.Show();
+}
+```
+
+The **CalculateExpandRatio** method handles content measurement based on whether the layout is inside a ScrollView or not:
+
+```
+public double CalculateExpandRatio(View content, double screenHeight, out double contentHeight)
+{
+    contentHeight = 0;
+
+    if (content is ScrollView scrollView && scrollView.Content != null)
+    {
+        contentHeight = scrollView.Content.Measure(this.Width, double.PositiveInfinity).Height +
+                        bottomSheet.ContentPadding.Top + bottomSheet.ContentPadding.Bottom;
+    }
+    else
+    {
+        contentHeight = content.Measure(this.Width, double.PositiveInfinity).Height +
+                        bottomSheet.ContentPadding.Top + bottomSheet.ContentPadding.Bottom;
+    }
+
+    if (bottomSheet.ShowGrabber)
+    {
+        contentHeight += bottomSheet.GrabberAreaHeight;
+    }
+
+    double ratio = contentHeight / screenHeight;
+    return Math.Clamp(ratio, 0.1, 1);
+}
+```
