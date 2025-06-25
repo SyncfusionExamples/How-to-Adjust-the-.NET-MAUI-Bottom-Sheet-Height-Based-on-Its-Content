@@ -9,7 +9,7 @@ Below are code examples that illustrate how to set these properties dynamically.
 
 **XAML: FullExpanded State**
 ```
-<bottomSheet:SfBottomSheet x:Name="bottomSheet" State="FullExpanded" ContentPadding="10">
+<bottomSheet:SfBottomSheet x:Name="bottomSheet" State="FullExpanded">
     <bottomSheet:SfBottomSheet.BottomSheetContent>
         <ScrollView x:Name="bottomSheetContent">
             <VerticalStackLayout>
@@ -22,11 +22,12 @@ Below are code examples that illustrate how to set these properties dynamically.
 
 **Output:**
 
- ![fullexpanded-bottomsheet-content.gif](https://support.syncfusion.com/kb/agent/attachment/article/20445/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyMTc0Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.oouzkx0Hn1hgIsom2upDVuSkIQODEnefEQNAeHg85OQ)
+![fullexpanded-bottomsheet-content (1)](https://github.com/user-attachments/assets/5c013765-2e00-4f1a-b352-25a586948dea)
+
 
 **XAML: HalfExpanded State**
 ```
-<bottomSheet:SfBottomSheet x:Name="bottomSheet" State="HalfExpanded" ContentPadding="10">
+<bottomSheet:SfBottomSheet x:Name="bottomSheet" State="HalfExpanded">
     <bottomSheet:SfBottomSheet.BottomSheetContent>
         <ScrollView x:Name="bottomSheetContent">
             <VerticalStackLayout>
@@ -39,11 +40,12 @@ Below are code examples that illustrate how to set these properties dynamically.
 
 **Output:**
  
- ![halfexpanded-bottomsheet-content.gif](https://support.syncfusion.com/kb/agent/attachment/article/20445/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyMTc1Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.ZF58PxjBOT820mpUF0ywj0ijVeY1HaqZCu6k-qfkCjM)
+![halfexpanded-bottomsheet-content (1)](https://github.com/user-attachments/assets/c8d636c2-9c17-4144-8d8e-9adf0a702e74)
+
  
 **XAML: Collapsed State**
 ```
-<bottomSheet:SfBottomSheet x:Name="bottomSheet" State="Collapsed" ContentPadding="10">
+<bottomSheet:SfBottomSheet x:Name="bottomSheet" State="Collapsed">
     <bottomSheet:SfBottomSheet.BottomSheetContent>
         <ScrollView x:Name="bottomSheetContent">
             <VerticalStackLayout>
@@ -56,7 +58,8 @@ Below are code examples that illustrate how to set these properties dynamically.
 
 **Output:**
 
- ![collapsed-bottomsheet-content-he.gif](https://support.syncfusion.com/kb/agent/attachment/article/20445/inline?token=eyJhbGciOiJodHRwOi8vd3d3LnczLm9yZy8yMDAxLzA0L3htbGRzaWctbW9yZSNobWFjLXNoYTI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjQyMTc2Iiwib3JnaWQiOiIzIiwiaXNzIjoic3VwcG9ydC5zeW5jZnVzaW9uLmNvbSJ9.4erQht30C6c3cRyFcoP-d4GR3oh0cNgd7vTvycYenO4)
+![collapsed-bottomsheet-content-he (1)](https://github.com/user-attachments/assets/22dbfd6a-d8e1-4e92-9770-c486d11a6c30)
+
 
  **C#:**
 
